@@ -1,0 +1,20 @@
+import random
+def main():
+    print("hi i need a random number in between 0 and 100 ")
+    hidden_number=40
+    user_attempt_number=1
+    user_guess=0
+    while user_guess != hidden_number and user_attempt_number < 5:
+        print("attempt",user_attempt_number)
+        user_input=input("guessing number is : ")
+        user_guess=int(user_input)
+        if user_guess > hidden_number:
+            print("bigger number")
+        elif user_guess < hidden_number:
+            print("smaller number")
+        else:
+            print("correct answer")
+        user_attempt_number+=1
+    if user_guess != hidden_number:
+        print("better luck next time")
+main()     
